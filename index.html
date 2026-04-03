@@ -24,8 +24,8 @@
         <img src="gif1.gif" class="gif">
         <p class="glow-text">Your first romantic sentence here ❤️</p>
         <div class="buttons">
-            <button onclick="showFinal()">Yes ❤️</button>
-            <button onclick="nextPage(2)">No 💔</button>
+            <button class="same-btn" onclick="showFinal()">Yes ❤️</button>
+            <button class="same-btn" onclick="nextPage(2)">No 💔</button>
         </div>
     </div>
 
@@ -34,8 +34,8 @@
         <img src="gif2.gif" class="gif">
         <p class="glow-text">Your second sentence here 🌙</p>
         <div class="buttons">
-            <button onclick="showFinal()">Yes ❤️</button>
-            <button onclick="nextPage(3)">No 💔</button>
+            <button class="same-btn" onclick="showFinal()">Yes ❤️</button>
+            <button class="same-btn" onclick="nextPage(3)">No 💔</button>
         </div>
     </div>
 
@@ -44,8 +44,8 @@
         <img src="gif3.gif" class="gif">
         <p class="glow-text">Your third sentence here ✨</p>
         <div class="buttons">
-            <button onclick="showFinal()">Yes ❤️</button>
-            <button onclick="nextPage(4)">No 💔</button>
+            <button class="same-btn" onclick="showFinal()">Yes ❤️</button>
+            <button class="same-btn" onclick="nextPage(4)">No 💔</button>
         </div>
     </div>
 
@@ -53,9 +53,10 @@
     <div class="page" id="page4">
         <img src="gif4.gif" class="gif">
         <p class="glow-text">Last chance... Will you stay forever? ❤️</p>
-        <div class="buttons">
-            <button onclick="showFinal()">Yes ❤️</button>
-            <button id="noBtn">No 💔</button>
+
+        <div class="buttons move-zone">
+            <button class="same-btn" onclick="showFinal()">Yes ❤️</button>
+            <button class="same-btn" id="noBtn">No 💔</button>
         </div>
     </div>
 
