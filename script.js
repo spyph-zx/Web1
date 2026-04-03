@@ -31,10 +31,10 @@ noBtn.addEventListener('click', () => {
     const frame = document.querySelector('.mobile-frame');
 
     const maxX = frame.clientWidth - noBtn.offsetWidth - 30;
-    const maxY = frame.clientHeight - noBtn.offsetHeight - 180;
+    const maxY = frame.clientHeight - noBtn.offsetHeight - 200;
 
     const x = Math.random() * maxX;
-    const y = 250 + Math.random() * (maxY - 250);
+    const y = 300 + Math.random() * (maxY - 300);
 
     noBtn.style.left = `${x}px`;
     noBtn.style.top = `${y}px`;
