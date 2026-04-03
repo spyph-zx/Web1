@@ -12,7 +12,7 @@ function nextPage(pageNum) {
         page.classList.remove('active');
     });
 
-    if(pageNum === 1){
+    if (pageNum === 1) {
         document.getElementById('page1').classList.add('active');
     } else {
         document.getElementById('page' + pageNum).classList.add('active');
@@ -28,10 +28,10 @@ function showFinal() {
 }
 
 noBtn.addEventListener('click', () => {
-    const frame = document.querySelector('.mobile-frame');
+    const zone = document.querySelector('.move-zone');
 
-    const maxX = frame.clientWidth - noBtn.offsetWidth - 30;
-    const maxY = frame.clientHeight - noBtn.offsetHeight - 100;
+    const maxX = zone.clientWidth - noBtn.offsetWidth - 20;
+    const maxY = zone.clientHeight - noBtn.offsetHeight - 20;
 
     const x = Math.random() * maxX;
     const y = Math.random() * maxY;
