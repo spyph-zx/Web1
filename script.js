@@ -8,8 +8,10 @@ enterBtn.onclick = () => {
 };
 
 function nextPage(pageNum) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
     if(pageNum === 1){
         document.getElementById('page1').classList.add('active');
     } else {
@@ -18,15 +20,18 @@ function nextPage(pageNum) {
 }
 
 function showFinal() {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
     document.getElementById('finalPage').classList.add('active');
 }
 
 noBtn.addEventListener('click', () => {
-    const container = document.querySelector('.container');
+    const frame = document.querySelector('.mobile-frame');
 
-    const maxX = container.clientWidth - noBtn.offsetWidth - 20;
-    const maxY = container.clientHeight - noBtn.offsetHeight - 20;
+    const maxX = frame.clientWidth - noBtn.offsetWidth - 30;
+    const maxY = frame.clientHeight - noBtn.offsetHeight - 100;
 
     const x = Math.random() * maxX;
     const y = Math.random() * maxY;
