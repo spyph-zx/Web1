@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" src="audio.mp3"></audio>
+
+<div class="petals"></div>
+
+<div class="container">
+
+    <!-- Entry Page -->
+    <div class="page active" id="entryPage">
+        <button id="enterBtn">Enter ❤️</button>
+    </div>
+
+    <!-- Page 1 -->
+    <div class="page" id="page1">
+        <img src="gif1.gif" class="gif">
+        <p>Your first sentence here...</p>
+        <button onclick="nextPage(2)">Next</button>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page" id="page2">
+        <img src="gif2.gif" class="gif">
+        <p>Your second sentence here...</p>
+        <button onclick="nextPage(3)">Next</button>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page" id="page3">
+        <img src="gif3.gif" class="gif">
+        <p>Your third sentence here...</p>
+        <button onclick="nextPage(4)">Next</button>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page" id="page4">
+        <img src="gif4.gif" class="gif">
+        <p>Will you stay with me forever? ❤️</p>
+
+        <div class="buttons">
+            <button onclick="showFinal()">Yes ❤️</button>
+            <button id="noBtn">No 💔</button>
+        </div>
+    </div>
+
+    <!-- Final Page -->
+    <div class="page" id="finalPage">
+        <img src="gif5.gif" class="gif">
+        <p>You made my world beautiful ❤️</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
