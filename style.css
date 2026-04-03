@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -32,6 +31,7 @@ body::before {
 .page {
     display: none;
     text-align: center;
+    width: 100%;
     animation: fadeIn 1s ease;
 }
 
@@ -58,10 +58,18 @@ body::before {
         0 0 30px #ff69b4;
 }
 
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    height: 200px;
+}
+
 .same-btn {
-    width: 120px;
-    height: 50px;
-    margin: 10px;
+    width: 130px;
+    height: 55px;
     border: none;
     border-radius: 30px;
     font-size: 18px;
@@ -74,21 +82,10 @@ body::before {
         0 0 25px rgba(255,182,193,0.5);
 }
 
-.buttons {
-    position: relative;
-    height: 180px;
-    margin-top: 20px;
-}
-
-.move-zone {
-    width: 100%;
-    position: relative;
-}
-
 #noBtn {
     position: absolute;
-    left: 210px;
-    top: 10px;
+    left: 52%;
+    top: 0;
 }
 
 .blossoms {
