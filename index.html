@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You ❤️</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0b12" />
+  <title>For You 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Background + Overlay -->
+  <div class="bg" id="bg"></div>
+  <div class="overlay"></div>
 
-<audio id="bgMusic" src="audio.mp3"></audio>
+  <!-- Falling Blossoms Layer -->
+  <div id="petals-layer" aria-hidden="true"></div>
 
-<div class="blossoms"></div>
+  <!-- Landing Gate -->
+  <section id="gate" class="gate">
+    <div class="gate-card">
+      <h1 class="title">For My Favorite Person</h1>
+      <p class="subtitle">A little something made with love ✨</p>
 
-<div class="mobile-frame">
+      <button id="enterPlayBtn" class="btn btn-primary glow">
+        Enter & Play 💞
+      </button>
 
-    <!-- Entry -->
-    <div class="page active" id="entryPage">
-        <button id="enterBtn">Enter ❤️</button>
+      <p id="audioHint" class="hint" role="status" aria-live="polite"></p>
     </div>
+  </section>
 
-    <!-- Page 1 -->
-    <div class="page" id="page1">
-        <img src="gif1.gif" class="gif">
-        <p class="glow-text">Your first romantic sentence here ❤️</p>
-        <div class="buttons">
-            <button class="same-btn" onclick="showFinal()">Yes ❤️</button>
-            <button class="same-btn" onclick="nextPage(2)">No 💔</button>
+  <!-- Phone Frame (Main App) -->
+  <main id="app" class="app hidden" aria-live="polite">
+    <div class="phone">
+      <header class="phone-header">
+        <div class="dot dot-pink"></div>
+        <div class="dot dot-rose"></div>
+        <div class="dot dot-violet"></div>
+        <div class="title-mini">Just for You</div>
+      </header>
+
+      <section id="content" class="content">
+        <h2 id="pageText" class="romantic-text glow-soft"></h2>
+
+        <div class="gif-wrap">
+          <img id="pageGif" class="gif" src="" alt="Romantic moment" />
         </div>
-    </div>
 
-    <!-- Page 2 -->
-    <div class="page" id="page2">
-        <img src="gif2.gif" class="gif">
-        <p class="glow-text">Your second sentence here 🌙</p>
-        <div class="buttons">
-            <button class="same-btn" onclick="showFinal()">Yes ❤️</button>
-            <button class="same-btn" onclick="nextPage(3)">No 💔</button>
+        <div id="buttonsRow" class="btn-row">
+          <button id="yesBtn" class="btn btn-yes glow">Yes 💗</button>
+          <button id="noBtn" class="btn btn-no glow">No 🙈</button>
         </div>
-    </div>
+      </section>
 
-    <!-- Page 3 -->
-    <div class="page" id="page3">
-        <img src="gif3.gif" class="gif">
-        <p class="glow-text">Your third sentence here ✨</p>
-        <div class="buttons">
-            <button class="same-btn" onclick="showFinal()">Yes ❤️</button>
-            <button class="same-btn" onclick="nextPage(4)">No 💔</button>
+      <footer class="phone-footer">
+        <div id="progress" class="progress">
+          <span class="heart active">❤</span>
+          <span class="heart">❤</span>
+          <span class="heart">❤</span>
+          <span class="heart">❤</span>
         </div>
+      </footer>
     </div>
+  </main>
 
-    <!-- Page 4 -->
-    <div class="page" id="page4">
-        <img src="gif4.gif" class="gif">
-        <p class="glow-text">Last chance... Will you stay forever? ❤️</p>
-
-        <div class="buttons move-zone">
-            <button class="same-btn" onclick="showFinal()">Yes ❤️</button>
-            <button class="same-btn" id="noBtn">No 💔</button>
-        </div>
+  <!-- Final Page -->
+  <section id="final" class="final hidden">
+    <div class="final-card">
+      <h2 id="finalText" class="romantic-text glow-soft"></h2>
+      <div class="gif-wrap final-gif-wrap">
+        <img id="finalGif" class="gif" src="" alt="Happy ending" />
+      </div>
+      <button id="replayBtn" class="btn btn-outline">Replay 🌸</button>
     </div>
+  </section>
 
-    <!-- Final -->
-    <div class="page" id="finalPage">
-        <img src="gif5.gif" class="gif">
-        <p class="glow-text">You just made my heart complete ❤️</p>
-    </div>
+  <!-- Background Audio (plays from Enter button) -->
+  <audio id="bgAudio" src="assets/audio/romance.mp3" preload="auto" loop></audio>
 
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
