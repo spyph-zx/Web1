@@ -28,13 +28,13 @@ function showFinal() {
 }
 
 noBtn.addEventListener('click', () => {
-    const zone = document.querySelector('.move-zone');
+    const frame = document.querySelector('.mobile-frame');
 
-    const maxX = zone.clientWidth - noBtn.offsetWidth - 20;
-    const maxY = zone.clientHeight - noBtn.offsetHeight - 20;
+    const maxX = frame.clientWidth - noBtn.offsetWidth - 30;
+    const maxY = frame.clientHeight - noBtn.offsetHeight - 180;
 
     const x = Math.random() * maxX;
-    const y = Math.random() * maxY;
+    const y = 250 + Math.random() * (maxY - 250);
 
     noBtn.style.left = `${x}px`;
     noBtn.style.top = `${y}px`;
